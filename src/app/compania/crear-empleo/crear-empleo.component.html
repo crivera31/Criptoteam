@@ -12,19 +12,22 @@
             </div>
             <div class="form-group row">
               <div class="col-sm-4 mb-3 mb-sm-0">
-                <textarea class="form-control " formControlName="description" name="description" id="description" cols="30" rows="3" placeholder="Descripción..."></textarea>
+                <textarea class="form-control" formControlName="description" name="description" id="description" cols="30" rows="3" placeholder="Descripción..."></textarea>
               </div>
               <div class="col-sm-4">
-                <textarea class="form-control " formControlName="description_headline" name="description_headline" id="description_headline" cols="30" rows="3" placeholder="Título de la descripción..."></textarea>
+                <textarea class="form-control" formControlName="description_headline" name="description_headline" id="description_headline" cols="30" rows="3" placeholder="Título de la descripción..."></textarea>
               </div>
               <div class="col-sm-4">
-                <textarea class="form-control " formControlName="functions" name="functions" id="functions" cols="30" rows="3" placeholder="Funciones..."></textarea>
+                <textarea class="form-control" formControlName="functions" name="functions" id="functions" cols="30" rows="3" placeholder="Funciones..."></textarea>
               </div>
             </div>
 
             <div class="form-group row">
               <div class="col-sm-3 mb-3 mb-sm-0">
-                <select name="remote_modality" id="remote_modality" formControlName="remote_modality"></select>
+                <select class="form-control" name="remote_modality" id="remote_modality" formControlName="remote_modality">
+                  <option disabled selected>Escoger modalidad</option>  
+                  <option *ngFor="let item of lstModality" [value]="item.attributes.locale_key">{{item.attributes.name}}</option>
+                </select>
               </div>
               <div class="col-sm-3 mb-3 mb-sm-0">
                 <input type="text" class="form-control form-control-user" id="min_salary"
