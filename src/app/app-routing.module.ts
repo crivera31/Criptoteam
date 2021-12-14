@@ -7,24 +7,26 @@ import { CrearEmpleoComponent } from './compania/crear-empleo/crear-empleo.compo
 
 
 const routes: Routes = [
-   {
-        path:'',
-        component:HomeComponent
+  {
+    path: '',
+    component: HomeComponent
 
-    },
+  },
 
-    {
-        path:'listaEmpleos',
-        component:ListarEmpleoComponent
-    },
+  {
+    path: 'listaEmpleos',
+    component: ListarEmpleoComponent
+  },
 
-     {
-        path:'crearEmpleo',
-        component:CrearEmpleoComponent
-    }
-
-
- ];
+  {
+    path: 'crearEmpleo',
+    component: CrearEmpleoComponent
+  },
+  {
+    path: '**',
+    redirectTo: ''
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
