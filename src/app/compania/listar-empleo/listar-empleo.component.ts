@@ -1,13 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { EmpleosService } from "../../Services/EmpleosService";
 import { Router, ActivatedRoute } from '@angular/router';
-
+import { JobDto } from 'src/app/Models/JobDto';
 @Component({
 	selector: 'app-listar-empleo',
 	templateUrl: './listar-empleo.component.html',
 	styleUrls: ['./listar-empleo.component.css']
 })
+
+
+
 export class ListarEmpleoComponent implements OnInit {
+	jobs: JobDto[]= [];
 
 	constructor(private empleosService: EmpleosService, 
 				private activatedRoute: ActivatedRoute, 
@@ -17,7 +21,7 @@ export class ListarEmpleoComponent implements OnInit {
 	ngOnInit(): void {
 		this.empleosService.getJobsByCompany(1, 10).subscribe(
 			response=>{
-				console.log('Success ' + response)
+				this.jobs=response;
 			});
 	}
 

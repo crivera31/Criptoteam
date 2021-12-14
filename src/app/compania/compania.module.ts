@@ -5,6 +5,7 @@ import { ListarEmpleoComponent } from './listar-empleo/listar-empleo.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { FiltersComponent } from './filters/filters.component';
 
 
 const routes: Routes = [{ path: '', component: ListarEmpleoComponent }]
@@ -14,7 +15,8 @@ const routes: Routes = [{ path: '', component: ListarEmpleoComponent }]
     imports: [RouterModule.forChild(routes)],
     exports: [RouterModule],
     declarations: [
-      HomeComponent
+      HomeComponent,
+      FiltersComponent
     ],
 })
 
