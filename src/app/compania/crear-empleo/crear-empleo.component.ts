@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { EmpleosService } from '../../Services/EmpleosService';
 import { Modality } from '../../Models/modality';
+import { AttributeDto } from '../../Models/AttributeDto';
 
 @Component({
   selector: 'app-crear-empleo',
@@ -9,10 +10,13 @@ import { Modality } from '../../Models/modality';
   styleUrls: ['./crear-empleo.component.css']
 })
 export class CrearEmpleoComponent implements OnInit {
+  public job: AttributeDto;
   public lstModality: Modality[] = [];
   public jobForm: FormGroup;
 
   constructor(private fb: FormBuilder, private empleosService: EmpleosService) {
+    this.job = new AttributeDto();
+
     this.jobForm = this.fb.group({
       title: ['', [Validators.required]],
       description: ['', [Validators.required]],
@@ -38,7 +42,17 @@ export class CrearEmpleoComponent implements OnInit {
   }
 
   onCreate() {
-    console.log(this.jobForm.value)
+    this.job = this.jobForm.value;
+    this.empleosService.crearJob(this.job).subscribe(
+      res => {
+        console.log(res)
+        this.jobForm.reset({
+          remote_modality: ''
+        });
+      }
+    )
+
+
   }
 
 }
