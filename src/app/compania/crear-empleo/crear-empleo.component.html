@@ -1,1 +1,44 @@
-<p>crear-empleo works!</p>
+<div class="card shadow mb-4">
+  <div class="card-header py-3">
+    <h4 class="m-0 font-weight-bold text-primary">Crear Job</h4>
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col">
+        <div class="p-3">
+          <form class="user" id="jobForm" (ngSubmit)="onCreate()" [formGroup]="jobForm">
+            <div class="form-group">
+              <input type="text" class="form-control form-control-user" formControlName="title" id="title" placeholder="Título">
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-4 mb-3 mb-sm-0">
+                <textarea class="form-control " formControlName="description" name="description" id="description" cols="30" rows="3" placeholder="Descripción..."></textarea>
+              </div>
+              <div class="col-sm-4">
+                <textarea class="form-control " formControlName="description_headline" name="description_headline" id="description_headline" cols="30" rows="3" placeholder="Título de la descripción..."></textarea>
+              </div>
+              <div class="col-sm-4">
+                <textarea class="form-control " formControlName="functions" name="functions" id="functions" cols="30" rows="3" placeholder="Funciones..."></textarea>
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <div class="col-sm-3 mb-3 mb-sm-0">
+                <select name="remote_modality" id="remote_modality" formControlName="remote_modality"></select>
+              </div>
+              <div class="col-sm-3 mb-3 mb-sm-0">
+                <input type="text" class="form-control form-control-user" id="min_salary"
+                  placeholder="Salario mínimo" (keypress)="onlyNumeros($event)" formControlName="min_salary">
+              </div>
+              <div class="col-sm-3">
+                <input type="text" class="form-control form-control-user" id="max_salary"
+                  placeholder="Salario máximo" (keypress)="onlyNumeros($event)" formControlName="max_salary">
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-user btn-block" [disabled]="jobForm.invalid">Crear job</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
