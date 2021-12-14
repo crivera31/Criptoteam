@@ -16,4 +16,5 @@ export const environment = {
 // import 'zone.js/plugins/zone-error';  // Included with Angular CLI.
 
 
-export const urlApi="https://sandbox.getonbrd.dev/api/v0"
+export const urlApi='https://sandbox.getonbrd.dev/api/v0'
+export const api_key='NIaKIO8xlC2vaeb5FQxmSN3azr2FYdyqInOuKyBG41Ng'
