@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { CrearEmpleoComponent } from './crear-empleo/crear-empleo.component';
 import { ListarEmpleoComponent } from './listar-empleo/listar-empleo.component';
 import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 
 
