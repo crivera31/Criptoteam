@@ -1,4 +1,4 @@
-# SOFTWARE SCRA
+# Crypto Soft
 
 Sistema web dirigido a empresas de reclutamiento, mejora las propuestas laborales y mejora tus métricas, con este sistema podrás tener a tu
 alcance, datos que te permitirán mejorar las ofertas laborales, asi mismo tendras de manera gráfica las tendencias y sueldos promedios ya sea por ubicación o por puesto laboral,
