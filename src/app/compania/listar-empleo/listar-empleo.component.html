@@ -1,23 +1,25 @@
-<!-- Main Content -->
-<div id="content">
+<div class="card shadow mb-4">
     <div class="card-header py-3">
-        <h4 class="m-0 font-weight-bold text-primary">Listado de Empleos</h4>
+        <h4 class="m-0 font-weight-bold text-primary">Lista de Empleos</h4>
     </div>
-    <!-- Begin Page Content -->
-    <div class="container-fluid">
+    <div class="card-body">
+        <div class="row">
+            <div class="col">
+                <div class="p-3">
 
-        <div class="form-group row">
-            <div class="col-sm-3 mb-3 mb-sm-0">
-                <select class="form-control" name="category" id="category">
-                    <option value="Elegir" >--Elegir Categoria--</option>
-                    <option *ngFor="let item of lstCategories" [value]="item.attributes.dimension">
-                        {{item.attributes.dimension}}</option>
-                </select>
-            </div>
-
+                    <div class="form-group row">
+                        <div class="col-sm-4 mb-3 mb-sm-12">
+                            <select [(ngModel)]="optionSelectedCategory" class="form-control" name="category"
+                                id="category">
+                                <option value="NA">--Elegir Categoria--</option>
+                                <option *ngFor="let item of lstCategories" [value]="item.attributes.name">
+                                    {{item.attributes.name}}</option>
+                            </select>
+                        </div>
+                        <!--
             <div class="col-sm-3 mb-3 mb-sm-0">
                 <select class="form-control" name="country" id="country">
-                    <option value="Elegir" >--Elegir País--</option>
+                    <option value="NA" >--Elegir País--</option>
                     <option  value="Argentina">Argentina</option>
                     <option  value="Argentina">Chile</option>
                     <option  value="Argentina">Colombia</option>
@@ -34,45 +36,52 @@
                         {{item.attributes.name}}</option>
                 </select>
             </div>
-            <div class="col-sm-3 mb-3 mb-sm-0">
-                <select class="form-control" name="remote_modality" id="remote_modality">
-                  <option value="elegir">--Elegir Nivel Experiencia--</option>
-                  <option *ngFor="let item of lstSeniorities" [value]="item.attributes.locale_key">{{item.attributes.name}}</option>
-                </select>
-              </div>
-        </div>
+        -->
+                        <div class="col-sm-4 mb-3 mb-sm-12">
+                            <select [(ngModel)]="optionSelectedSeniority" class="form-control" name="remote_modality"
+                                id="remote_modality">
+                                <option value="NA">--Elegir Nivel Experiencia--</option>
+                                <option *ngFor="let item of lstSeniorities" [value]="item.attributes.name">
+                                    {{item.attributes.name}}</option>
+                            </select>
+                        </div>
 
-        <!-- DataTales Example -->
-        <div class="card shadow mb-4">
-            <div class="card-body">
-                <div class="table-responsive">
-                    <table class="table table-striped" id="dataTable" width="100%" cellspacing="0">
-                        <thead>
-                            <tr>
-                                <th>Titulo</th>
-                                <th>Pais</th>
-                                <th>Categoria</th>
-                                <th>Nivel</th>
-                                <th>Estatus</th>
-                            </tr>
-                        </thead>
+                        <div class="col-sm-4 mb-3 mb-sm-12">
+                            <button type="button" (click)="search()"
+                                class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">Buscar</button>
+                        </div>
+                    </div>
 
-                        <tbody>
-                            <tr *ngFor="let item of lsjobs">
-                                <td>{{item.attributes.title}}</td>
-                                <td>{{item.attributes.country}}</td>
-                                <td>{{item.attributes.category_name}}</td>
-                                <td>{{item.attributes.seniority.data.type}}</td>
-                                <td>{{item.attributes.state}}</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <!-- DataTales Example -->
+                    <div class="card shadow mb-12">
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped" id="dataTable">
+                                    <thead>
+                                        <tr>
+                                            <th>Titulo</th>
+                                            <th>Pais</th>
+                                            <th>Categoria</th>
+                                            <th>Nivel</th>
+                                            <th>Estatus</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr *ngFor="let item of lsJobsAux">
+                                            <td>{{item.attributes.title}}</td>
+                                            <td>{{item.attributes.country}}</td>
+                                            <td>{{item.attributes.category_name}}</td>
+                                            <td>{{item.attributes.seniority.data.type}}</td>
+                                            <td>{{item.attributes.state}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-
     </div>
-    <!-- /.container-fluid -->
-
 </div>
-<!-- End of Main Content -->

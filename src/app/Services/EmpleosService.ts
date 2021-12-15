@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { urlApi, api_key } from '../../environments/environment';
+import { urlApi, api_key, urlApiPublic } from '../../environments/environment';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -22,11 +22,11 @@ export class EmpleosService {
 	}
 
 	modalities(): Observable<any> {
-		return this.http.get(urlApi + '/modalities');
+		return this.http.get(urlApiPublic + '/modalities');
 	}
 
 	seniorities(): Observable<any> {
-		return this.http.get(urlApi + '/seniorities');
+		return this.http.get(urlApiPublic + '/seniorities');
 	}
 
 	crearJob(job: AttributeDto): Observable<any>{
@@ -47,10 +47,10 @@ export class EmpleosService {
 	}
 
 	categories(): Observable<any> {
-		return this.http.get(urlApi + '/categories');
+		return this.http.get(urlApiPublic + '/categories');
 	}
 
 	cities(): Observable<any> {
-		return this.http.get(urlApi + '/cities');
+		return this.http.get(urlApiPublic + '/cities');
 	}
 }
