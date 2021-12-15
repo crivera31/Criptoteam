@@ -9,21 +9,21 @@ conecta directamente con la plataforma de [Get On Board](https://www.getonbrd.co
 
 # Mira como funciona.
 
-[![IMAGE ALT TEXT HERE](https://i.imgur.com/roNROI5.jpg)](https://www.youtube.com/watch?v=3m7Z3g_U-Cs)
+![IMAGE ALT TEXT HERE](https://i.imgur.com/roNROI5.jpg)](https://www.youtube.com/watch?v=3m7Z3g_U-Cs)
 
 
 ## Gráfica de sueldos por ubicacion.
 
-[![IMAGE ALT TEXT HERE](https://i.imgur.com/roNROI5.jpg)
+![IMAGE ALT TEXT HERE](https://i.imgur.com/e8ic9el.jpg)
 
 ### Creación de Vacante.
 
-[![IMAGE ALT TEXT HERE](https://i.imgur.com/ditNF3M.png)
+![IMAGE ALT TEXT HERE](https://i.imgur.com/ditNF3M.png)
 
 
 ### Listado de vacantes enviadas.
 
-[![IMAGE ALT TEXT HERE](https://i.imgur.com/kCWVwxg.png)
+![IMAGE ALT TEXT HERE](https://i.imgur.com/kCWVwxg.png)
 
 
 ### Documentacion Técnica [Aquí](https://github.com/crivera31/Criptoteam/blob/main/src/assets/vendor/Technical.md)
