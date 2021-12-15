@@ -15,13 +15,13 @@ export class EmpleosService {
 
 	constructor(private http: HttpClient) { }
 
-	getJobsByCompany(pageNumber: number, per_page: number): Observable<JobDto[]> {
+	getJobsByCompany(pageNumber: number, per_page: number): Observable<any> {
 		return this.http.get(urlApi + '/jobs?api_key=' + api_key + '&per_page='
-			+ per_page + '&page=' + pageNumber ).pipe(
-				map((response: any) => {
-					return response as JobDto[];
-				})
-			);
+			+ per_page + '&page=' + pageNumber );
+	}
+
+	modalities(): Observable<any> {
+		return this.http.get(urlApi + '/modalities');
 	}
 
 }

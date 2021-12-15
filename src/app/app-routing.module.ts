@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router'
 import { ListarEmpleoComponent } from './compania/listar-empleo/listar-empleo.component';
 import { HomeComponent } from './compania/home/home.component';
 import { CrearEmpleoComponent } from './compania/crear-empleo/crear-empleo.component';
+import { CompaniaModule } from './compania/compania.module';
 
 
 const routes: Routes = [
@@ -29,7 +30,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes),
+    CompaniaModule],
   exports: [RouterModule]
 })
 
