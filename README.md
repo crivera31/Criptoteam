@@ -9,7 +9,7 @@ conecta directamente con la plataforma de [Get On Board](https://www.getonbrd.co
 
 # Mira como funciona.
 
-![IMAGE ALT TEXT HERE](https://i.imgur.com/roNROI5.jpg)](https://www.youtube.com/watch?v=3m7Z3g_U-Cs)
+[![IMAGE ALT TEXT HERE](https://i.imgur.com/roNROI5.jpg)](https://www.youtube.com/watch?v=3m7Z3g_U-Cs)
 
 
 ## Gráfica de Salarios por ubicacion y puesto.
