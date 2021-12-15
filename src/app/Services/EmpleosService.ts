@@ -29,6 +29,10 @@ export class EmpleosService {
 		return this.http.get(urlApi + '/modalities');
 	}
 
+	seniorities(): Observable<any> {
+		return this.http.get(urlApi + '/seniorities');
+	}
+
 	crearJob(job: AttributeDto): Observable<any>{
 		const params = new HttpParams()
 						.set('api_key', api_key)
@@ -36,11 +40,11 @@ export class EmpleosService {
 						.set('description', job.description || '')
 						.set('description_headline', job.description_headline || '')
 						.set('functions', job.functions || '')
-						.set('remote_modality', job.remote_modality || '')
+						.set('remote_modality', 'fully_remote')
 						.set('min_salary', job.min_salary || '')
 						.set('max_salary', job.max_salary || '');
-
-		return this.http.post(urlApi + '/jobs', { params });
+						console.log(params.toString());
+		return this.http.post(urlApi + '/jobs',{}, { params });
 	}
 
 }
