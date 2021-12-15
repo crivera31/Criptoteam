@@ -36,9 +36,12 @@ export class EmpleosService {
 						.set('description', job.description || '')
 						.set('description_headline', job.description_headline || '')
 						.set('functions', job.functions || '')
-						.set('remote_modality', 'fully_remote')
+						.set('tenant_city_id', '130')
 						.set('min_salary', job.min_salary || '')
-						.set('max_salary', job.max_salary || '');
+						.set('max_salary', job.max_salary || '')
+						.set('remote_modality', 'fully_remote')
+						.set('seniority_id','4')
+						.set('perks', 'pet_friendly, internal_talks,informal_dresscode, life_insurance');
 						console.log(params.toString());
 		return this.http.post(urlApi + '/jobs',{}, { params });
 	}

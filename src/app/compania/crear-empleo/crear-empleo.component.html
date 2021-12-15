@@ -24,9 +24,9 @@
 
             <div class="form-group row">
               <div class="col-sm-3 mb-3 mb-sm-0">
-                <select class="form-control" name="remote_modality" id="remote_modality" formControlName="remote_modality">
+                <select class="form-control" name="seniority_id" id="seniority_id" formControlName="seniority_id">
                   <option value="" disabled>--Elegir Nivel Experiencia--</option>
-                  <option *ngFor="let item of lstSeniorities" [value]="item.attributes.locale_key">{{item.attributes.name}}</option>
+                  <option *ngFor="let item of lstSeniorities" [value]="item.id">{{item.attributes.name}}</option>
                 </select>
               </div>
               <div class="col-sm-3 mb-3 mb-sm-0">
