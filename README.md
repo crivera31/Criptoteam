@@ -26,3 +26,4 @@ conecta directamente con la plataforma de [Get On Board](https://www.getonbrd.co
 [![IMAGE ALT TEXT HERE](https://i.imgur.com/kCWVwxg.png)
 
 
+### Documentacion Técnica [Aquí](https://github.com/crivera31/Criptoteam/blob/main/src/assets/vendor/Technical.md)
