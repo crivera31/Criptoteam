@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { EmpleosService } from '../../Services/EmpleosService';
 import { Modality } from '../../Models/modality';
+import { AttributeDto } from '../../Models/AttributeDto';
+import { Seniority } from 'src/app/Models/seniorities';
 
 @Component({
   selector: 'app-crear-empleo',
@@ -9,16 +11,21 @@ import { Modality } from '../../Models/modality';
   styleUrls: ['./crear-empleo.component.css']
 })
 export class CrearEmpleoComponent implements OnInit {
+  public job: AttributeDto;
   public lstModality: Modality[] = [];
+  public lstSeniorities: Seniority[] = []
   public jobForm: FormGroup;
 
   constructor(private fb: FormBuilder, private empleosService: EmpleosService) {
+    this.job = new AttributeDto();
+
     this.jobForm = this.fb.group({
       title: ['', [Validators.required]],
       description: ['', [Validators.required]],
       description_headline: ['', [Validators.required]],
       functions: ['', [Validators.required]],
       remote_modality: ['', [Validators.required]],
+      seniority_id: ['', [Validators.required]],
       min_salary: ['', [Validators.required]],
       max_salary: ['', [Validators.required]]
     });
@@ -31,6 +38,13 @@ export class CrearEmpleoComponent implements OnInit {
         console.log(res)
       }
     )
+
+    this.empleosService.seniorities().subscribe(
+      res => {
+        this.lstSeniorities = res.data;
+        console.log(this.lstSeniorities)
+      }
+    )
   }
 
   onlyNumeros(event: any) {
@@ -38,7 +52,17 @@ export class CrearEmpleoComponent implements OnInit {
   }
 
   onCreate() {
-    console.log(this.jobForm.value)
+    this.job = this.jobForm.value;
+    this.empleosService.crearJob(this.job).subscribe(
+      res => {
+        console.log(res)
+        this.jobForm.reset({
+          remote_modality: ''
+        });
+      }
+    )
+
+
   }
 
 }
