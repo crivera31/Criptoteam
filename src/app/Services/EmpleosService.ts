@@ -43,4 +43,11 @@ export class EmpleosService {
 		return this.http.post(urlApi + '/jobs',{}, { params });
 	}
 
+	categories(): Observable<any> {
+		return this.http.get(urlApi + '/categories');
+	}
+
+	cities(): Observable<any> {
+		return this.http.get(urlApi + '/cities');
+	}
 }

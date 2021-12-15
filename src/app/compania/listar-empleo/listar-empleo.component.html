@@ -8,34 +8,38 @@
 
         <div class="form-group row">
             <div class="col-sm-3 mb-3 mb-sm-0">
-                <select class="form-control" name="remote_modality" id="remote_modality"
-                    formControlName="remote_modality">
-                    <option *ngFor="let item of lstModality" [value]="item.attributes.locale_key">
-                        {{item.attributes.name}}</option>
-                </select>
-            </div>
-            <div class="col-sm-3 mb-3 mb-sm-0">
-                <select class="form-control" name="remote_modality" id="remote_modality"
-                    formControlName="remote_modality">
-                    <option *ngFor="let item of lstModality" [value]="item.attributes.locale_key">
-                        {{item.attributes.name}}</option>
+                <select class="form-control" name="category" id="category">
+                    <option value="Elegir" >--Elegir Categoria--</option>
+                    <option *ngFor="let item of lstCategories" [value]="item.attributes.dimension">
+                        {{item.attributes.dimension}}</option>
                 </select>
             </div>
 
             <div class="col-sm-3 mb-3 mb-sm-0">
-                <select class="form-control" name="remote_modality" id="remote_modality"
-                    formControlName="remote_modality">
+                <select class="form-control" name="country" id="country">
+                    <option value="Elegir" >--Elegir País--</option>
+                    <option  value="Argentina">Argentina</option>
+                    <option  value="Argentina">Chile</option>
+                    <option  value="Argentina">Colombia</option>
+                    <option  value="Argentina">Mexico</option>
+                    <option  value="Argentina">Peru</option>
+
+                </select>
+            </div>
+
+            <div class="col-sm-3 mb-3 mb-sm-0">
+                <select class="form-control" name="remote_modality" id="remote_modality">
+                    <option value="Elegir" >--Elegir Modalidad--</option>
                     <option *ngFor="let item of lstModality" [value]="item.attributes.locale_key">
                         {{item.attributes.name}}</option>
                 </select>
             </div>
             <div class="col-sm-3 mb-3 mb-sm-0">
-                <select class="form-control" name="remote_modality" id="remote_modality"
-                    formControlName="remote_modality">
-                    <option *ngFor="let item of lstModality" [value]="item.attributes.locale_key">
-                        {{item.attributes.name}}</option>
+                <select class="form-control" name="remote_modality" id="remote_modality">
+                  <option value="elegir">--Elegir Nivel Experiencia--</option>
+                  <option *ngFor="let item of lstSeniorities" [value]="item.attributes.locale_key">{{item.attributes.name}}</option>
                 </select>
-            </div>
+              </div>
         </div>
 
         <!-- DataTales Example -->

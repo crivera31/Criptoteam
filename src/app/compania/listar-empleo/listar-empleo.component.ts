@@ -3,7 +3,8 @@ import { EmpleosService } from "../../Services/EmpleosService";
 import { Router, ActivatedRoute } from '@angular/router';
 import { Job } from 'src/app/Models/Job';
 import { Modality } from '../../Models/modality';
-
+import { Seniority } from 'src/app/Models/seniorities';
+import { Category } from 'src/app/Models/category';
 @Component({
 	selector: 'app-listar-empleo',
 	templateUrl: './listar-empleo.component.html',
@@ -13,32 +14,43 @@ import { Modality } from '../../Models/modality';
 export class ListarEmpleoComponent implements OnInit {
 	public lsjobs: Job[] = [];
 	public lstModality: Modality[] = [];
+	public lstSeniorities: Seniority[] = [];
+	public lstCategories: Category[] = [];
 
-	constructor(private empleosService: EmpleosService, 
-				private activatedRoute: ActivatedRoute, 
-				private route: Router) {
+	constructor(private empleosService: EmpleosService,
+		private activatedRoute: ActivatedRoute,
+		private route: Router) {
 	}
 
 	ngOnInit(): void {
 		this.empleosService.getJobsByCompany(1, 10).subscribe(
-			response=>{
-				this.lsjobs=response.data;
+			response => {
+				this.lsjobs = response.data;
 			});
 
-/*			this.lsjobs.forEach((job:any) =>{
-				var date = new Date(job.attributes.created_at);
-				job.created= this.datepipe.transform(date, 'yyyy-MM-dd');
 
-			});*/
-
-			this.empleosService.modalities().subscribe(
-				res => {
-				  this.lstModality = res.data;
-				  console.log(res)
+		this.empleosService.modalities().subscribe(
+			res => {
+				this.lstModality = res.data;
+				console.log(res)
 
 
-				}
-			  )
+			}
+		)
+
+		this.empleosService.seniorities().subscribe(
+			res => {
+				this.lstSeniorities = res.data;
+				console.log(this.lstSeniorities)
+			}
+		)
+
+		this.empleosService.categories().subscribe(
+			res => {
+				this.lstCategories = res.data;
+				console.log('categories '+ this.lstCategories)
+			}
+		)
 	}
-		
+
 }
