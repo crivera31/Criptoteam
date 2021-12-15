@@ -35,7 +35,6 @@ export class CrearEmpleoComponent implements OnInit {
     this.empleosService.modalities().subscribe(
       res => {
         this.lstModality = res.data;
-        console.log(res)
       }
     )
 
@@ -53,6 +52,7 @@ export class CrearEmpleoComponent implements OnInit {
 
   onCreate() {
     this.job = this.jobForm.value;
+    console.log(this.job)
     this.empleosService.crearJob(this.job).subscribe(
       res => {
         console.log(res)
@@ -61,8 +61,6 @@ export class CrearEmpleoComponent implements OnInit {
         });
       }
     )
-
-
   }
 
 }
