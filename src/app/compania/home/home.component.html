@@ -1,12 +1,37 @@
 <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Development Approach</h6>
+        <h6 class="m-0 font-weight-bold text-primary">Salario Promedio</h6>
     </div>
     <div class="card-body">
-        <p>SB Admin 2 makes extensive use of Bootstrap 4 utility classes in order to reduce
-            CSS bloat and poor page performance. Custom CSS classes are used to create
-            custom components and custom utility classes.</p>
-        <p class="mb-0">Before working with this theme, you should become familiar with the
-            Bootstrap framework, especially the utility classes.</p>
+        <div class="form-group row">
+            <div class="col-sm-4 mb-3 mb-sm-12">
+                <select [(ngModel)]="optionSelectedCountry" class="form-control" name="country" id="country">
+                    <option value="NA">--Elegir País--</option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="Chile">Chile</option>
+                    <option value="Colombia">Colombia</option>
+                    <option value="Mexico">Mexico</option>
+                    <option value="Peru">Peru</option>
+
+                </select>
+            </div>
+
+            <div class="col-sm-4 mb-3 mb-sm-12">
+                <select [(ngModel)]="optionSelectedTitle" class="form-control" name="country" id="country">
+                    <option value="NA">--Elegir el Puesto--</option>
+                    <option value="Back-end Developer">Back-end Developer</option>
+                    <option value="Desarrollador Front-end">Desarrollador Front-end</option>
+                    <option value="Ruby on Rails Developer">Ruby on Rails Developer</option>
+                    <option value="Analista Programador de Integraciones">Analista Programador de Integraciones</option>
+                    <option value="Desarrollador/a Python">Desarrollador/a Python</option>
+                </select>
+            </div>
+
+            <div class="col-sm-4 mb-3 mb-sm-12">
+                <button type="button" (click)="search()"
+                    class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">Buscar</button>
+            </div>
+
+        </div>
     </div>
 </div>
