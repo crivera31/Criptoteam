@@ -1,7 +1,6 @@
 # Crypto Soft
 
-Sistema web dirigido a empresas de reclutamiento. 
-Mejora tus propuestas laborales y mejora tus métricas, con este sistema podrás tener a tu
+Sistema web dirigido a empresas de reclutamiento.:briefcase:<br />Mejora tus propuestas laborales y mejora tus métricas.:smiley:<br />Con este sistema podrás tener a tu
 alcance la información necesaria que te permitirán saber Salarios promedios para un puesto en especifico, por ubicación y que herramientas o lenguajes de programación son los más usados por la comunidad todo esto lo tendrás de manera gráfica, teniendo a la mano esta información podrás compartir tu propuesta o vacante hacia comunidad, esto es posible ya que nuestro sistema se conecta directamente con la plataforma de [Get On Board](https://www.getonbrd.com/dashboard), además podrás visualizar tus vacantes y ver el estatus en el que se encuentra.
 
 
