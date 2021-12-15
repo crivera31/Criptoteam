@@ -18,9 +18,9 @@ alcance la información necesaria que te permitirán saber Salarios promedios pa
 ![IMAGE ALT TEXT HERE](https://i.imgur.com/ditNF3M.png)
 
 
-### Listado de vacantes enviadas.
+### Listado de vacantes compartidas.
 
-![IMAGE ALT TEXT HERE](https://i.imgur.com/kCWVwxg.png)
+![IMAGE ALT TEXT HERE](https://i.imgur.com/gnZvwta.png)
 
 
 ### Documentacion Técnica [Aquí](https://github.com/crivera31/Criptoteam/blob/main/src/assets/vendor/Technical.md)
