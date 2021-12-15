@@ -14,13 +14,15 @@ conecta directamente con la plataforma de [Get On Board](https://www.getonbrd.co
 
 ## Gráfica de sueldos por ubicacion.
 
-[![IMAGE ALT TEXT HERE](https://i.imgur.com/roNROI5.jpg)]
+[![IMAGE ALT TEXT HERE](https://i.imgur.com/roNROI5.jpg)
 
 ### Creación de Vacante.
 
-[![IMAGE ALT TEXT HERE](https://i.imgur.com/ditNF3M.png)]
+[![IMAGE ALT TEXT HERE](https://i.imgur.com/ditNF3M.png)
 
 
 ### Listado de vacantes enviadas.
 
-[![IMAGE ALT TEXT HERE](https://i.imgur.com/kCWVwxg.png)]
+[![IMAGE ALT TEXT HERE](https://i.imgur.com/kCWVwxg.png)
+
+
